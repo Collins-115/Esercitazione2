@@ -7,13 +7,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Button;
+import android.widget.SeekBar;
+import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
-    EditText nome,cognome,data;
+    EditText nome,cognome,data,indirizzo;
+    TextView etaNumero;
     Button invia;
     Persona persona;
+    SeekBar eta;
     public static final String PERSONA_PATH = "com.example.esercitazione2.Persona";
+    int etaN;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +27,12 @@ public class MainActivity extends AppCompatActivity {
         nome = findViewById(R.id.nome);
         cognome = findViewById(R.id.cognome);
         data = findViewById(R.id.nascita);
+        indirizzo = findViewById(R.id.indirizzo);
         invia = findViewById(R.id.invia);
+        eta = (SeekBar) findViewById(R.id.eta);
+        etaNumero = findViewById(R.id.etaNumero);
+        etaN=eta.getProgress();
+
         persona = new Persona();
 
         invia.setOnClickListener(new View.OnClickListener() {
@@ -34,13 +44,33 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(showResult);
             }
         });
+        eta.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                etaN = progress;
+                etaNumero.setText(""+etaN);
+
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                etaNumero.setText(""+etaN);
+            }
+        });
+
     }
 
     public void updatePerson(){
         this.persona.setNome(this.nome.getText().toString());
         this.persona.setCognome(this.cognome.getText().toString());
         this.persona.setNascita(this.data.getText().toString());
-
+        this.persona.setIndirizzo(this.indirizzo.getText().toString());
+        this.persona.setEta(etaN);
     }
 
 }

@@ -74,6 +74,32 @@
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Indirizzo:"
+                android:textSize="30dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Prova"
+                android:id="@+id/indirizzoConf" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Eta'"
+                android:textSize="30dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Prova"
+                android:id="@+id/etaConf" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
