@@ -100,6 +100,19 @@
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CAP"
+                android:textSize="30dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Prova"
+                android:id="@+id/capConf" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

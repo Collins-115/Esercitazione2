@@ -126,11 +126,46 @@
                     android:gravity="right"/>
 
             </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CAP:"
+                android:textSize="30dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="es. 09010"
+                android:id="@+id/cap" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email:"
+                android:textSize="30dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="es. matteocollins@live.it"
+                android:id="@+id/email" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Invia"
                 android:id="@+id/invia"
+                android:backgroundTint="@color/newColor"/>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pulisci campi"
+                android:id="@+id/pulisci"
                 android:backgroundTint="@color/newColor"/>
             <TextView
                 android:layout_width="match_parent"
@@ -140,7 +175,8 @@
                 android:gravity="center"
                 android:textSize="30dp"
                 android:visibility="gone"
-                android:background="@color/red"/>
+                android:background="@color/red"
+                android:textColor="@color/white"/>
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
